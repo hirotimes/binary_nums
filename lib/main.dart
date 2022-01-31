@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'ui/binary_nums.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      const ProviderScope(
+        child: MyApp(),
+      ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +23,7 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData.dark().copyWith(
         primaryColor: Colors.green,
       ),
-      initialRoute: '/',
+      // initialRoute: '/',
       routes: {
         '/': (context) => const BinaryNums(),
         // '/page1': (context) => AlignTestPage(),
