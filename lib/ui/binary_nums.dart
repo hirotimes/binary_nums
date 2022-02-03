@@ -38,7 +38,7 @@ class BinaryNums extends ConsumerWidget {
           children: [
             const SizedBox(
               height: 100,
-              child: Text('仮置き'),
+              child: Text('2進数に変換するだけのやつ'),
             ),
             TextFormField(
               controller: decimalNumberController,
@@ -75,9 +75,7 @@ class BinaryNums extends ConsumerWidget {
             ),
             SizedBox(
               height: 30,
-              // child: Text(binaryNumberProvider.state),
-              // child: Text(ref.watch(_binaryNumberProvider)),
-              child: Text(binaryNumberProvider.state),
+              child: Text(ref.watch(_binaryNumberProvider)),
             )
           ],
         ),
